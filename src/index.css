@@ -1,0 +1,35 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+  color-scheme: light dark;
+  color: black;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #f40105;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body {
+  padding: 100px 0 0 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  direction: ltr;
+}
+
+button {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #f40105;
+  border: 1px solid #f40105;
+  border-radius: 6px;
+}
