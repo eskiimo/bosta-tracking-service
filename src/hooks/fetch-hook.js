@@ -7,10 +7,11 @@ export const useFetchHook = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  console.log();
   const sendRequest = async (num) => {
     setLoading(true);
     try {
-      await fetch(`https://tracking.bosta.co/shipments/track/${num}`)
+      await fetch(`${import.meta.env.VITE_URL}${num}`)
         .then((res) => res.json())
         .then((data) => {
           console.log("data", data);

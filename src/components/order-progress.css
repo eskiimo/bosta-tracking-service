@@ -34,3 +34,12 @@
 .reverse .stepper {
   direction: rtl;
 }
+
+.canceled {
+  color: #f40105;
+  font-weight: 700;
+}
+
+.info-p {
+  font-weight: 700;
+}

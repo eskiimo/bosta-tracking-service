@@ -28,7 +28,7 @@ function Home() {
           <div className="rlist services">
             <div className="service-item">
               <i className="fa-solid fa-wallet"></i>
-              <h1>{t("financial")}</h1>
+              <h3>{t("financial")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -38,7 +38,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-regular fa-moon"></i>
-              <h1>{t("overnight")}</h1>
+              <h3>{t("overnight")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -48,7 +48,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-solid fa-location-dot"></i>
-              <h1>{t("overegypt")}</h1>
+              <h3>{t("overegypt")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -58,7 +58,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-solid fa-plane-arrival"></i>
-              <h1>{t("worldwide")}</h1>
+              <h3>{t("worldwide")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque

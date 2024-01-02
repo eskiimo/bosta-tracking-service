@@ -96,6 +96,14 @@
   .test-1 {
     padding-left: 5em;
     padding-right: 5em;
+    & h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    & h3 {
+      font-size: 17px;
+      font-weight: 500;
+    }
   }
   .services {
     display: grid;

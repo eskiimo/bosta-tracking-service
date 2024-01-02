@@ -43,6 +43,7 @@ function TrackChipmentPage() {
               }
               trackNumber={order.TrackingNumber}
             />
+
             <div className="details-div">
               <ShippingDetailTable list={order.TransitEvents} />
 

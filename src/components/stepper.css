@@ -1,0 +1,66 @@
+.s-container {
+  padding: 1em;
+  margin: 1em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.steps {
+  height: 100px;
+  position: relative;
+  display: flex;
+  direction: ltr;
+  align-items: flex-end;
+}
+.reverse .s-container .steps {
+  direction: rtl !important;
+}
+
+#line {
+  position: absolute;
+  top: 50%;
+  height: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.point-wrapper {
+  width: 25%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: flex-end;
+  align-items: center;
+}
+.point {
+  min-width: 15px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid rgb(224, 221, 221);
+}
+.done {
+  background-color: #35b600;
+}
+
+#progressLine {
+  height: 5px;
+  width: 25%;
+  position: absolute;
+}
+.steps-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  justify-items: end;
+}
+.step-text {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.point i {
+  color: white;
+  padding: 0.25em;
+}

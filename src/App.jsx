@@ -7,6 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/navbar";
 import Home from "./pages/home";
 import TrackChipmentPage from "./pages/track";
+import MySteps from "./components/stepper";
 
 function App() {
   const { i18n } = useTranslation();
@@ -39,6 +40,7 @@ function App() {
         <NavBar languageChange={changeLang} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/s" element={<MySteps />} />
           <Route path="/track/:id" element={<TrackChipmentPage />} />
         </Routes>
       </ChakraProvider>
