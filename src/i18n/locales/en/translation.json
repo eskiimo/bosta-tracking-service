@@ -18,7 +18,7 @@
      "trader":"Trader",
      "deliveredwithin": "Delivered within",
      "conf-order":"Order Confirmed",
-     "trader-rec":"Trader recived order",
+     "trader-rec":"Package obtained from trader",
      "order-out":"Out For Delivery",
      "delivered":"Delivered",
      "branch":"Branch",
@@ -28,6 +28,15 @@
      "address":"Shipping address",
      "ship-details":"Shipping details",
      "isProb": "Is there a problem ?",
-     "report":"Report"
+     "report":"Report",
+     
+     "TICKET_CREATED":"Your shipment is created",
+     "PACKAGE_RECEIVED":"Shipment is received from seller",
+     "IN_TRANSIT":"In transit",
+     "WAITING_FOR_CUSTOMER_ACTION":"Waiting for customer action",
+     "NOT_YET_SHIPPED":"Not yet shipped",
+     "OUT_FOR_DELIVERY":"Shipment is out for delivery",
+     "DELIVERED":"Delivered"
+     
 
    }

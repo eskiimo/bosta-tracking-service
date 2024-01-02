@@ -1,8 +1,6 @@
 .s-container {
   padding: 1em;
   margin: 1em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .steps {
   height: 100px;
@@ -51,16 +49,50 @@
 }
 .steps-labels {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 25%));
   width: 100%;
   justify-items: end;
 }
 .step-text {
   font-size: 14px;
+  font-weight: 500;
   white-space: nowrap;
 }
 
 .point i {
   color: white;
   padding: 0.25em;
+}
+
+.col-steps i {
+  display: none;
+}
+@media (max-width: 750px) {
+  .s-container {
+    margin: 0;
+  }
+  #progressLine {
+    display: none;
+  }
+  .steps-labels {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 25%)); */
+    width: 100%;
+    flex-direction: column;
+    justify-items: end;
+    margin-top: 0.5em;
+  }
+  .point-wrapper {
+    display: none;
+  }
+  .col-steps {
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    & i {
+      display: flex;
+      margin: 0.25em 1em;
+      color: #35b600;
+    }
+  }
 }

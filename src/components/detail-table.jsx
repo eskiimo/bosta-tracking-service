@@ -15,18 +15,16 @@ function ShippingDetailTable({ list }) {
   const { t } = useTranslation();
   return (
     <>
-      <div className="shipping">
+      <div className="shipping-table">
         <h1>{t("ship-details")}</h1>
-        <TableContainer>
+        <TableContainer className="scrol-here">
           <Table variant="simple">
             <Thead>
               <Tr>
                 <Th>{t("branch")}</Th>
                 <Th>{t("date")}</Th>
                 <Th>{t("time")}</Th>
-                <Th>
-                  {t("details")} {list.length}
-                </Th>
+                <Th>{t("details")}</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -37,7 +35,7 @@ function ShippingDetailTable({ list }) {
                       <Td>Nasr City</Td>
                       <Td>{item.timestamp.split("T")[0]}</Td>
                       <Td>{item.timestamp.split("T")[1].split(".")[0]}</Td>
-                      <Td key={item.timestamp}>{item.state}</Td>
+                      <Td key={item.timestamp}>{t(item.state)}</Td>
                     </Tr>
                   </>
                 );

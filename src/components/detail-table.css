@@ -1,8 +1,16 @@
-.shipping {
+.shipping-table {
   grid-column: span 2;
+  direction: ltr;
+}
+
+.reverse .shipping-table {
+  direction: rtl;
+}
+
+.scrol-here {
+  overflow-y: scroll !important;
   max-height: 500px;
-  overflow-y: scroll;
 }
 td {
-  font-size: 12px;
+  font-size: 14px;
 }

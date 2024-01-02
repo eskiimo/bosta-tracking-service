@@ -44,7 +44,7 @@ function OrderProgress(props) {
 
   return (
     <div className="progress-div">
-      <div className="row order-details">
+      <div className=" order-details">
         <div className="col">
           <p>{t("ship-num")}</p>
           <p className="info-p">{trackNumber}</p>
@@ -52,7 +52,7 @@ function OrderProgress(props) {
         <div className="col">
           {" "}
           <p>{t("last-update")}</p>
-          <p className="info-p">{lastUpdate}</p>
+          <p className="info-p">{t(lastUpdate)}</p>
         </div>
         <div className="col">
           {" "}

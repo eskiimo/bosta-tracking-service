@@ -1,6 +1,7 @@
 .progress-div {
   padding: 1em 0;
-  margin: 2em 4em;
+  margin: 2em auto;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -9,10 +10,11 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .order-details {
-  height: 50%;
-  justify-content: space-evenly;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
   & p {
-    margin: 1em 2em;
+    margin: 0.5em 1em;
   }
 }
 .order-details:first-child {

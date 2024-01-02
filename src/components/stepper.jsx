@@ -41,7 +41,7 @@ function MySteps(props) {
             return (
               <div className="point-wrapper" key={index}>
                 <div className={`point ${active > index ? "done" : ""}`}>
-                  {active >= 3 && index == 2 ? (
+                  {active == index + 1 ? (
                     <i className="fa-solid fa-truck-fast"></i>
                   ) : null}
                 </div>
@@ -52,10 +52,10 @@ function MySteps(props) {
         <div className="steps-labels">
           {steps.map((i) => {
             return (
-              <p key={i} className="step-text">
-                {" "}
-                {i}
-              </p>
+              <div className="col-steps row" key={i}>
+                <i className="fa-solid fa-circle-check"></i>
+                <p className="step-text"> {i}</p>
+              </div>
             );
           })}
         </div>
