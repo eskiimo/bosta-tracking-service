@@ -19,7 +19,7 @@ a:hover {
 }
 
 body {
-  padding: 100px 0 0 0;
+  padding: 110px 0 0 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
@@ -32,4 +32,14 @@ button {
   background-color: #f40105;
   border: 1px solid #f40105;
   border-radius: 6px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }

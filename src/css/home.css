@@ -25,6 +25,9 @@
 }
 .hero-text button {
   font-weight: 900;
+  background-color: #f40105;
+  color: white;
+  padding: 0.25em 1em;
 }
 
 .hero-img {
@@ -52,10 +55,13 @@
     justify-items: center;
     align-items: center;
     justify-content: center;
-    /* padding: 1em; */
     width: 100%;
     min-height: 80vh;
     margin: 0;
+  }
+  .reverse .hero {
+    flex-direction: row-reverse;
+    direction: rtl;
   }
   .hero-text {
     padding-left: 5em;
@@ -89,6 +95,7 @@
   }
   .test-1 {
     padding-left: 5em;
+    padding-right: 5em;
   }
   .services {
     display: grid;

@@ -22,13 +22,13 @@ function Home() {
         </div>
       </section>
 
-      <section className="testimonials">
+      <section className="testimonials rlist">
         <div className="test-1">
-          <h1>Empowering businesses with our services and solutions</h1>
-          <div className="services">
+          <h1>{t("empower")}</h1>
+          <div className="rlist services">
             <div className="service-item">
               <i className="fa-solid fa-wallet"></i>
-              <h1>Full financial visibility</h1>
+              <h1>{t("financial")}</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -38,7 +38,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-regular fa-moon"></i>
-              <h1>Overnight delivery</h1>
+              <h1>{t("overnight")}</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -48,7 +48,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-solid fa-location-dot"></i>
-              <h1>Shipping all over Egypt</h1>
+              <h1>{t("overegypt")}</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque
@@ -58,7 +58,7 @@ function Home() {
             </div>
             <div className="service-item">
               <i className="fa-solid fa-plane-arrival"></i>
-              <h1>Worldwide Shipping</h1>
+              <h1>{t("worldwide")}</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores perspiciatis voluptates, inventore facilis doloremque

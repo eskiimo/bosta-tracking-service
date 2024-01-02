@@ -1,0 +1,8 @@
+.shipping {
+  grid-column: span 2;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+td {
+  font-size: 12px;
+}
