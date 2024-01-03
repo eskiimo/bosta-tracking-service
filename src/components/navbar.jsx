@@ -34,7 +34,7 @@ const NavBar = (props) => {
     nav.classList.toggle("display");
   };
   return (
-    <>
+    <div className="makethisfixed">
       <div className="rlist nav-bar">
         {" "}
         <img
@@ -141,7 +141,7 @@ const NavBar = (props) => {
           </button>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
