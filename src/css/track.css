@@ -29,6 +29,9 @@
   flex-direction: row-reverse;
 }
 
+.address h2 {
+  font-weight: 500;
+}
 .address-box {
   padding: 1em 2em;
   margin: 1em;
@@ -43,12 +46,11 @@
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  & p {
-    font-weight: 500;
-  }
-  & button {
-    color: white;
-    padding: 0.5em 3em;
-    background-color: #f40105;
-  }
+}
+.report button {
+  color: white;
+  padding: 0.5em 3em;
+  margin: 1em 0;
+  background-color: #f40105;
+  border-radius: 6px;
 }

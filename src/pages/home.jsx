@@ -3,9 +3,27 @@ import "../css/home.css";
 
 function Home() {
   const { t } = useTranslation();
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+
+      if (elementTop < windowHeight) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  //  add event listener to scrolling
+  window.addEventListener("scroll", reveal);
+
   return (
     <div className="home-page">
-      <section className="rlist hero">
+      <section className=" hero">
         <div className="hero-text">
           <h1>{t("heroh1")}</h1>
           <article>{t("herodesc")}</article>
@@ -16,18 +34,23 @@ function Home() {
           style={{ backgroundImage: "url('assets/hero.png')" }}
         >
           <div
-            className="truckonpic"
-            style={{ backgroundImage: "url('assets/bike.gif')" }}
+            className="truckonpic reveal "
+            style={{ backgroundImage: "url('assets/bike.png')" }}
           ></div>
+          {/* <div className="octagon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div> */}
         </div>
       </section>
 
-      <section className="testimonials rlist">
+      <section className="testimonials">
         <div className="test-1">
           <h1>{t("empower")}</h1>
           <div className="rlist services">
-            <div className="service-item">
-              <i className="fa-solid fa-wallet"></i>
+            <div className="reveal service-item">
+              <i className=" fa-solid fa-wallet"></i>
               <h3>{t("financial")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,8 +59,8 @@ function Home() {
                 sequi dicta veritatis atque, unde facere amet? Earum, vel!
               </p>
             </div>
-            <div className="service-item">
-              <i className="fa-regular fa-moon"></i>
+            <div className="reveal service-item">
+              <i className=" fa-regular fa-moon"></i>
               <h3>{t("overnight")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -46,8 +69,8 @@ function Home() {
                 sequi dicta veritatis atque, unde facere amet? Earum, vel!
               </p>
             </div>
-            <div className="service-item">
-              <i className="fa-solid fa-location-dot"></i>
+            <div className="reveal service-item">
+              <i className=" fa-solid fa-location-dot"></i>
               <h3>{t("overegypt")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -56,8 +79,8 @@ function Home() {
                 sequi dicta veritatis atque, unde facere amet? Earum, vel!
               </p>
             </div>
-            <div className="service-item">
-              <i className="fa-solid fa-plane-arrival"></i>
+            <div className="reveal service-item">
+              <i className=" fa-solid fa-plane-arrival"></i>
               <h3>{t("worldwide")}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,10 +91,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div
-          style={{ backgroundImage: "url('assets/bg-1.png')" }}
-          className="artwork"
-        ></div>
+        <img src="assets/bg-1.png" className="artwork"></img>
       </section>
     </div>
   );

@@ -36,7 +36,8 @@
      "WAITING_FOR_CUSTOMER_ACTION":"Waiting for customer action",
      "NOT_YET_SHIPPED":"Not yet shipped",
      "OUT_FOR_DELIVERY":"Shipment is out for delivery",
-     "DELIVERED":"Delivered"
-     
+     "DELIVERED":"Delivered",
+     "DELIVERED_TO_SENDER":"Delivered to sender",
+     "nc":"Nasr City"
 
    }

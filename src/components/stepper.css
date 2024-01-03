@@ -46,6 +46,7 @@
   height: 5px;
   width: 25%;
   position: absolute;
+  transition: width 1s ease-out;
 }
 .steps-labels {
   display: grid;

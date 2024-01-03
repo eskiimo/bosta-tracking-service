@@ -23,7 +23,8 @@ function TrackChipmentPage() {
       setisLoading(false);
     };
     fetchData(id);
-  }, [id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -49,9 +50,11 @@ function TrackChipmentPage() {
 
               <div className="col address">
                 <h1>{t("address")}</h1>
-                <div className="address-box">address of shipping</div>
+                <div className="address-box">
+                  <h2>{t("address")}</h2>
+                </div>
                 <div className="report">
-                  <p>{t("isProb")}</p>
+                  <h2>{t("isProb")}</h2>
                   <button>{t("report")}</button>
                 </div>
               </div>

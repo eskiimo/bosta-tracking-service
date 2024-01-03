@@ -20,6 +20,9 @@ function MySteps(props) {
       } else if (status === "DELIVERED_TO_SENDER") {
         setActive(3);
         color = "#F40105";
+      } else if (status === "WAITING_FOR_CUSTOMER_ACTION") {
+        color = "#F9BA02";
+        setActive(3);
       }
 
       document.getElementById("progressLine").style.backgroundColor = color;

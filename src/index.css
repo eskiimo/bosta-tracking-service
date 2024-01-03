@@ -26,14 +26,6 @@ body {
   direction: ltr;
 }
 
-button {
-  padding: 0.5em 1em;
-  margin: 1em 0;
-  background-color: #f40105;
-  border: 1px solid #f40105;
-  border-radius: 6px;
-}
-
 .row {
   display: flex;
   flex-direction: row;

@@ -36,5 +36,7 @@
      "WAITING_FOR_CUSTOMER_ACTION":"بانتظار رد العميل",
      "NOT_YET_SHIPPED":"لم يتم الشحن بعد",
      "OUT_FOR_DELIVERY":"الشحنة خرجت للتسليl",
-     "DELIVERED":"تم التسليم"
+     "DELIVERED":"تم التسليم",
+     "DELIVERED_TO_SENDER":"تم التسليم للمرسل",
+     "nc":"مدينة نصر"
    }

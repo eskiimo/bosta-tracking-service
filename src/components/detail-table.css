@@ -2,15 +2,21 @@
   grid-column: span 2;
   direction: ltr;
 }
-
+.table {
+  padding: 1em;
+  margin: 1em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.thead th {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  font-size: 15px;
+}
 .reverse .shipping-table {
   direction: rtl;
 }
 
-.scrol-here {
-  overflow-y: scroll !important;
-  max-height: 500px;
-}
 td {
   font-size: 14px;
 }

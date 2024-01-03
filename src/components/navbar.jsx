@@ -28,19 +28,74 @@ const NavBar = (props) => {
     const num = e.target.tracknum.value;
     nav(`/track/${num}`);
   };
+
+  const toggleNav = () => {
+    let nav = document.getElementsByClassName("collapse")[0];
+    nav.classList.toggle("display");
+  };
   return (
-    <div className="rlist nav-bar">
-      {" "}
-      <img
-        alt="logo"
-        className="nav-section logo-img"
-        src={
-          lang === "en"
-            ? "/assets/bosta-logo-en.png"
-            : "/assets/bosta-logo-ar.png"
-        }
-      />
-      <ul className="nav-section nav-links">
+    <>
+      <div className="rlist nav-bar">
+        {" "}
+        <img
+          alt="logo"
+          className="nav-section logo-img"
+          src={
+            lang === "en"
+              ? "/assets/bosta-logo-en.png"
+              : "/assets/bosta-logo-ar.png"
+          }
+        />
+        <button onClick={toggleNav} className="hamburger">
+          <i className="fa-solid fa-bars"></i>
+        </button>
+        <ul className="nav-section nav-links hide">
+          <li>
+            <Link to="/">{t("home")}</Link>
+          </li>
+          <li>
+            <Link to="/prices">{t("prices")}</Link>
+          </li>
+          <li>
+            <Link to="/call">{t("call")}</Link>
+          </li>
+        </ul>
+        <ul className=" rlist nav-section nav-user hide">
+          <Popover>
+            <PopoverTrigger>
+              <button className="trackbtn">
+                {t("track")} <i className="fa-solid fa-chevron-down"></i>
+              </button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <PopoverCloseButton />
+
+              <PopoverBody>
+                <form className="trackForm" onSubmit={handleTrack}>
+                  <p>{t("track")} ?</p>
+                  <button className="search" type="submit">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input
+                    type="number"
+                    placeholder={t("ship-num")}
+                    name="tracknum"
+                  />
+                </form>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
+          <li>
+            <Link to="/register">{t("register")} </Link>
+          </li>
+          <li>
+            <button className="langbtn" onClick={trans}>
+              {lang === "en" ? "عربي" : "EN"}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul className="collapse">
         <li>
           <Link to="/">{t("home")}</Link>
         </li>
@@ -49,11 +104,6 @@ const NavBar = (props) => {
         </li>
         <li>
           <Link to="/call">{t("call")}</Link>
-        </li>
-      </ul>
-      <ul className=" rlist nav-section nav-user">
-        <li>
-          <Link to="/track"></Link>
         </li>
         <Popover>
           <PopoverTrigger>
@@ -67,7 +117,7 @@ const NavBar = (props) => {
             <PopoverBody>
               {t("track")} ?
               <form className="trackForm" onSubmit={handleTrack}>
-                <button className="search" type="submit">
+                <button className="search2" type="submit">
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <input
@@ -84,11 +134,11 @@ const NavBar = (props) => {
         </li>
         <li>
           <button className="langbtn" onClick={trans}>
-            {lang === "en" ? "عربي" : "EN"}
+            {lang === "en" ? "عربي" : "English"}
           </button>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

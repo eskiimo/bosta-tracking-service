@@ -17,9 +17,9 @@ function ShippingDetailTable({ list }) {
     <>
       <div className="shipping-table">
         <h1>{t("ship-details")}</h1>
-        <TableContainer className="scrol-here">
+        <TableContainer className="table">
           <Table variant="simple">
-            <Thead>
+            <Thead className="thead">
               <Tr>
                 <Th>{t("branch")}</Th>
                 <Th>{t("date")}</Th>
@@ -32,7 +32,7 @@ function ShippingDetailTable({ list }) {
                 return (
                   <>
                     <Tr>
-                      <Td>Nasr City</Td>
+                      <Td>{t("nc")}</Td>
                       <Td>{item.timestamp.split("T")[0]}</Td>
                       <Td>{item.timestamp.split("T")[1].split(".")[0]}</Td>
                       <Td key={item.timestamp}>{t(item.state)}</Td>
