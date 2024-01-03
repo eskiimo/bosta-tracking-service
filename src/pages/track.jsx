@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../css/track.css";
-
+import { Spinner } from "@chakra-ui/react";
 import { useFetchHook } from "../hooks/fetch-hook";
 import ShippingDetailTable from "../components/detail-table";
 import OrderProgress from "../components/order-progress";
@@ -13,13 +13,11 @@ function TrackChipmentPage() {
   const { sendRequest, error } = useFetchHook();
   const { t } = useTranslation();
   const { id } = useParams();
-  console.log(id);
 
   const order = useSelector((state) => state.shipping.value);
   useEffect(() => {
     const fetchData = async (id) => {
       await sendRequest(id);
-      console.log("shipping", order);
       setisLoading(false);
     };
     fetchData(id);
@@ -29,7 +27,17 @@ function TrackChipmentPage() {
   return (
     <>
       {isLoading ? (
-        <p>loading</p>
+        <div
+          className="row"
+          style={{
+            width: "100vw",
+            height: "100vh",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Spinner size="xl" />
+        </div>
       ) : error ? (
         <p>{error}</p>
       ) : (
