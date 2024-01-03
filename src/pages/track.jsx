@@ -1,32 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "../css/track.css";
+import { useParams } from "react-router-dom";
 import { Spinner } from "@chakra-ui/react";
 import { useFetchHook } from "../hooks/fetch-hook";
 import ShippingDetailTable from "../components/detail-table";
 import OrderProgress from "../components/order-progress";
+import "../css/track.css";
 
 function TrackChipmentPage() {
-  const [isLoading, setisLoading] = useState(true);
-  const { sendRequest, error } = useFetchHook();
-  const { t } = useTranslation();
+  const { loading, sendRequest, error } = useFetchHook();
   const { id } = useParams();
+  const { t } = useTranslation();
 
   const order = useSelector((state) => state.shipping.value);
+
   useEffect(() => {
-    const fetchData = async (id) => {
-      await sendRequest(id);
-      setisLoading(false);
-    };
-    fetchData(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    sendRequest(id);
+  }, [id, sendRequest]);
 
   return (
     <>
-      {isLoading ? (
+      {loading ? (
         <div
           className="row"
           style={{
