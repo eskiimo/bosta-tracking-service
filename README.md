@@ -4,7 +4,7 @@
 A web application that mimics tracking shipment in https://bosta.co 
 
 
-### Demo
+## Demo
 
 https://bosta-track.netlify.app/
 ## Run Locally
@@ -33,9 +33,12 @@ Start the server
   npm run dev
 ```
 
+## TypeScript
+Switch branches to TS to check the TS version ...
 
 
-# React + Vite
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
