@@ -38,6 +38,9 @@ const NavBar = (props) => {
       <div className="rlist nav-bar">
         {" "}
         <img
+          onClick={() => {
+            nav("/");
+          }}
           alt="logo"
           className="nav-section logo-img"
           src={
