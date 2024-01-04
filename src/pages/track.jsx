@@ -36,7 +36,7 @@ function TrackChipmentPage() {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        order && (
+        order.CurrentStatus && (
           <div className="track-page">
             <OrderProgress
               status={order.CurrentStatus.state}
