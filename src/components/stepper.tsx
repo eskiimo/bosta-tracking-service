@@ -1,0 +1,71 @@
+import { useEffect, useState } from "react";
+import "./stepper.css";
+
+function MySteps(props: { steps: Array<string>; status: string }) {
+  const { steps, status } = props;
+  //   console.log(steps);
+  const [active, setActive] = useState(1);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleProgress = (status: string) => {
+      console.log(status);
+      let color = "#35B600";
+      if (status === "DELIVERED") {
+        setActive(4);
+        color = "#35B600";
+      } else if (status === "CANCELLED") {
+        setActive(2);
+        color = "#F40105";
+      } else if (status === "DELIVERED_TO_SENDER") {
+        setActive(3);
+        color = "#F40105";
+      } else if (status === "WAITING_FOR_CUSTOMER_ACTION") {
+        color = "#F9BA02";
+        setActive(3);
+      }
+
+      const pLine = document.getElementById("progressLine") as HTMLElement;
+      pLine.style.backgroundColor = color;
+      const elements = document.getElementsByClassName("done");
+      Array.from(elements).forEach((element: Element) => {
+        (element as HTMLElement).style.backgroundColor = color;
+      });
+      setProgress((active / 4) * 100);
+      pLine.style.width = `${progress}%`;
+    };
+    handleProgress(status);
+  }, [progress, active, status]);
+  return (
+    <div className="s-container">
+      <div className="steps">
+        <div id="line">
+          <div id="progressLine"></div>
+          {steps.map((i, index) => {
+            return (
+              <div className="point-wrapper" key={i}>
+                <div className={`point ${active > index ? "done" : ""}`}>
+                  {active == index + 1 ? (
+                    <i className="fa-solid fa-truck-fast"></i>
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="steps-labels">
+          {steps.map((i: string) => {
+            return (
+              <div className="col-steps row" key={i}>
+                <i className="fa-solid fa-circle-check"></i>
+                <p className="step-text"> {i}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MySteps;

@@ -1,0 +1,100 @@
+.s-container {
+  padding: 1em;
+  margin: 1em;
+}
+.steps {
+  height: 100px;
+  position: relative;
+  display: flex;
+  direction: ltr;
+  align-items: flex-end;
+}
+.reverse .s-container .steps {
+  direction: rtl !important;
+}
+
+#line {
+  position: absolute;
+  top: 50%;
+  height: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.point-wrapper {
+  width: 25%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: flex-end;
+  align-items: center;
+}
+.point {
+  min-width: 15px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid rgb(224, 221, 221);
+}
+.done {
+  background-color: #35b600;
+}
+
+#progressLine {
+  height: 5px;
+  width: 25%;
+  position: absolute;
+  transition: width 1s ease-out;
+}
+.steps-labels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 25%));
+  width: 100%;
+  justify-items: end;
+}
+.step-text {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.point i {
+  color: white;
+  padding: 0.25em;
+}
+
+.col-steps i {
+  display: none;
+}
+@media (max-width: 750px) {
+  .s-container {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+  #progressLine {
+    display: none;
+  }
+  .steps-labels {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 25%)); */
+    width: 100%;
+    flex-direction: column;
+    justify-items: end;
+    margin-top: 0.5em;
+  }
+  .point-wrapper {
+    display: none;
+  }
+  .col-steps {
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    & i {
+      display: flex;
+      margin: 0.25em 1em;
+      color: #35b600;
+    }
+  }
+}

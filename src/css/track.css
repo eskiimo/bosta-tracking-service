@@ -1,0 +1,56 @@
+@media (min-width: 1000px) {
+  .details-div {
+    padding: 1em 0;
+    margin: 2em auto !important;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
+    justify-content: center;
+    grid-gap: 2em;
+  }
+}
+.details-div {
+  padding: 1em 0;
+  margin: 2em 1em;
+  justify-content: center;
+  direction: ltr;
+}
+.reverse .details-div {
+  direction: rtl;
+}
+
+.details-div h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 2em 0 1em 0;
+  text-align: start;
+}
+.reverse .details-div {
+  flex-direction: row-reverse;
+}
+
+.address h2 {
+  font-weight: 500;
+}
+.address-box {
+  padding: 1em 2em;
+  margin: 1em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.report {
+  padding: 0.5em 2em;
+  margin: 0 1em;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.report button {
+  color: white;
+  padding: 0.5em 3em;
+  margin: 1em 0;
+  background-color: #f40105;
+  border-radius: 6px;
+}
