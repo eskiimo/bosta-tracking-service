@@ -34,7 +34,7 @@ Start the server
 ```
 
 ## TypeScript
-Switch branches to TS to check the TS version ...
+Full version in typescript is available on separate branch.
 
 
 
