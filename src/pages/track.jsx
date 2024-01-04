@@ -43,7 +43,9 @@ function TrackChipmentPage() {
               date={order.PromisedDate}
               provider={order.provider}
               lastUpdate={
-                order.TransitEvents[order.TransitEvents.length - 1].state
+                order.TransitEvents[order.TransitEvents.length - 1]
+                  ? order.TransitEvents[order.TransitEvents.length - 1].state
+                  : "unknown"
               }
               trackNumber={order.TrackingNumber}
             />
